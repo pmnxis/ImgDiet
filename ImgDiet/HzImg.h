@@ -1,7 +1,11 @@
 ﻿#pragma once
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <memory.h>
 #include <math.h>
+#include <conio.h>
+#include <assert.h>
 
 //   VISUAL STUDIO stop! (instead of Ctrl + F5)
 #if _MSC_VER >= 1600
@@ -11,6 +15,13 @@
 #else
 #define STOP {}
 #endif
+
+#ifdef _DEBUG
+#include <crtdbg.h>
+#define new new(_NORMAL_BLOCK, __FILE__, __LINE__)
+#endif
+
+
 
 #ifndef uint8_t
 typedef unsigned char uint8_t;
@@ -34,7 +45,8 @@ struct doublePot {
 }typedef doublePot;
 
 extern imgPot * Create_imgPot(const char filepath[], int w, int h);
+extern imgPot * cp_imgPot(imgPot * src);
 extern uint8_t reviseUINT8(double input);
 extern void Destroy_imgPot(imgPot * pot);
 extern void Destroy_doublePot(doublePot * pot);
-void store_ImgPot(imgPot * pot, const char filepath[]);
+extern void store_ImgPot(imgPot * pot, const char filepath[], long long buffSize);

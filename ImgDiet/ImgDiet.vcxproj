@@ -118,6 +118,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CmpData.c" />
+    <ClCompile Include="DCT.c" />
+    <ClCompile Include="Decoder.c" />
+    <ClCompile Include="Encoder.c" />
+    <ClCompile Include="HzImg.c" />
+    <ClCompile Include="main.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CmpData.h" />
+    <ClInclude Include="DCT.h" />
+    <ClInclude Include="HzImg.h" />
+    <ClInclude Include="main.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
